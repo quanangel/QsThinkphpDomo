@@ -1,3 +1,2 @@
 # Qs-thinkphp5
-因为好多常用的类库不能直接支持THINKPHP5
-有了这个自己有些自己重写、改造的thinkphp5的扩展库
+因为好多常用的类库不能直接支持THINKPHP5、有了这个自己有些自己重写、改造的thinkphp5的扩展库
