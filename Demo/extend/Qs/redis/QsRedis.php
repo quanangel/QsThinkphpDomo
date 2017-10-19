@@ -84,7 +84,7 @@ Class QsRedis {
             $first = true;
         }
         $key = $this->getRealKey($name);
-        $value = ( is_object($value) || is_array($value) ) ? json_decode($value, true) : $value;
+        $value = ( is_object($value) || is_array($value) ) ? json_encode($value, true) : $value;
         if ( is_int($expire) && $expire ) {
             $result = $this->handler->setex($key, $expire, $value);
         } else {
@@ -135,7 +135,7 @@ Class QsRedis {
      */
     protected function getRealKey($name)
     {
-        return $this->tag . $name;
+        return $this->_config['PREFIX'] . $name;
     }
 
     /*
